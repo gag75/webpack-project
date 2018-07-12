@@ -34,7 +34,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		2: 0
+/******/ 		4: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -103,12 +103,6 @@
 /***/ (function(module, exports) {
 
 console.log('FIRST Module !!!');
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-console.log('MODULE 3 !!!');
 
 /***/ })
 /******/ ]);

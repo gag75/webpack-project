@@ -13,6 +13,7 @@ module.exports = {
   entry: {
     app: path.resolve(__dirname, './src/app.js'),
     anotherApp: './src/SubModules/index.js',
+    thirdApp: './src/thirdApp.js',
   },
   output: {
     path: path.resolve(__dirname, './build'),
@@ -20,7 +21,12 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common'
+      name: 'common1',
+      chunks: ['app', 'thirdApp'],
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common2',
+      chunks: ['app', 'anotherApp'],
     }),
     /**
      * Очищает сборочную директорию перед новой сборкой
